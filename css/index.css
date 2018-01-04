@@ -1,0 +1,91 @@
+/**
+ * Created by CIAE presencepolymorph@gmail.com on 2017/10/11.
+ */
+body, html, div, blockquote, img, label, p, h1, h2, h3, h4, h5, h6, pre, ul, ol,
+li, dl, dt, dd, form, a, fieldset, input, th, td
+{margin: 0; padding: 0; border: 0; outline: none}
+body,button{line-height: 1;font-size: 16px; font-family: "Microsoft YaHei";/* Decide for yourself if you want to include this. */}
+h1, h2, h3, h4, h5, h6{font-size: 100%;padding: .6em 0;margin: 0 15px;}
+ul, ol{list-style: none}
+a{color: black;text-decoration: none}
+a:hover{text-decoration: underline;}
+body{
+    background-color: #CD2727;
+    /*height: 100vh;
+    overflow: hidden;*/
+}
+.page{
+    width: 10rem;
+    height: 100vh;
+    background-color: #CD2727;
+    overflow: hidden;
+    margin: 0 auto;
+    /*display: none;*/
+}
+.activePage{
+    display: block;
+}
+#btnLeft{
+    position: fixed;
+    top:50%;
+    left:.5rem;
+    width: 1rem;
+    height: 1rem;
+    background-color:gold;
+    transform: translate(-50%,-50%);
+}
+#btnRight{
+    position: fixed;
+    top:50%;
+    right:-.5rem;
+    width: 1rem;
+    height: 1rem;
+    background-color:gold;
+    transform: translate(-50%,-50%);
+}
+.baseCtn{
+    padding-top: 20px;
+    position: relative;
+}
+.basicImg{
+    width: 100%;
+}
+.ui-loader{
+    display: none;
+}
+.btn1{
+    position: absolute;
+    bottom: .5rem;
+    width: 10rem;
+    height: 2rem;
+    border: 0px solid white;
+    left:0;
+    right: 0;
+    margin: 0 auto;
+}
+.pointer{
+    position: absolute;
+    bottom: .2rem;
+    right: 1.6rem;
+    width: 1rem;
+    animation:pointerAni .8s infinite;
+    -webkit-animation:pointerAni .8s infinite; /* Safari 和 Chrome */
+}
+@keyframes pointerAni
+{
+    0%  {bottom:.2rem}
+    50%   {bottom:0}
+    100%  {bottom:.2rem}
+}
+
+@-webkit-keyframes pointerAni /*Safari and Chrome*/
+{
+    0%  {bottom:.2rem}
+    50%   {bottom:0}
+    100%  {bottom:.2rem}
+}
+#video{
+    height: 10rem;
+    transform: rotate(90deg) translate(-10rem,0);
+    transform-origin: left bottom;
+}

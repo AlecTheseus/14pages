@@ -1,0 +1,221 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!--适配-->
+    <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
+    <link href="https://cdn.bootcss.com/Swiper/4.0.7/css/swiper.min.css" rel="stylesheet">
+    <!--css--><!--
+    <!--<link type="text/css" rel="stylesheet" href="css/index.css"  />-->
+    <style>
+        body, html, div, blockquote, img, label, p, h1, h2, h3, h4, h5, h6, pre, ul, ol,
+        li, dl, dt, dd, form, a, fieldset, input, th, td
+        {margin: 0; padding: 0; border: 0; outline: none}
+        body,button{line-height: 1;font-size: 16px; font-family: "Microsoft YaHei";/* Decide for yourself if you want to include this. */}
+        h1, h2, h3, h4, h5, h6{font-size: 100%;padding: .6em 0;margin: 0 15px;}
+        ul, ol{list-style: none}
+        a{color: black;text-decoration: none}
+        a:hover{text-decoration: underline;}
+        body{
+            background-color: #CD2727;
+        }
+        .baseCtn{
+            z-index: 0;
+            position: relative;
+        }
+        #video{
+            height: 10rem;
+            /*transform: rotate(90deg) translate(-100vh,0);*/
+            /*transform-origin: left bottom;*/
+            position: absolute;
+            left: 50%;
+            top:50%;
+            transform: translate(-50%,-50%) rotate(90deg);
+        }
+        .video{
+            width: 8rem;
+            margin: 1rem;
+        }
+        .cover{
+            position: absolute;
+            top:0;
+            left: 0;
+            right: 0;
+            width: 10rem;
+            z-index: 99;
+        }
+    </style>
+    <!--<link rel="apple-touch-icon" href="favicon.png">
+    <link rel="Shortcut Icon" href="favicon.png" type="image/x-icon">-->
+    <title>《时间的朋友》金句集锦</title>
+</head>
+<body>
+    <div class="baseCtn" >
+        <!--<div class="swiper-container1">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img class="cover" src="img/pg1.png">
+                </div>
+                <div class="swiper-slide">
+                    <div class="swiper-container2">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <video autoplay="autoplay" class="video" src="video/1.mp4" ></video>
+                                <img class="cover" src="img/cover.png">
+                            </div>
+                            <div class="swiper-slide">
+                                <video class="video" src="video/2.mp4" ></video>
+                                <img class="cover" src="img/cover.png">
+                            </div>
+                            <div class="swiper-slide">
+                                <video class="video" src="video/3.mp4" ></video>
+                                <img class="cover" src="img/cover.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img class="cover" src="img/pg1.png">
+                </div>
+            </div>
+        </div>-->
+
+        <div class="swiper-container swiper-container-father">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide slide1"><img class="cover" src="img/pg1.png"></div>
+                <div class="swiper-slide slide2">
+                    <div class="swiper-container swiper-container-son">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <video id="video1" autoplay="autoplay" class="video" src="video/1.mp4" ></video>
+                                <img class="cover" id="cover1" src="img/cover.png">
+                            </div>
+                            <div class="swiper-slide">
+                                <video id="video2" class="video" src="video/2.mp4" ></video>
+                                <img class="cover" id="cover2" src="img/cover.png">
+                            </div>
+                            <div class="swiper-slide">
+                                <video id="video3" class="video" src="video/3.mp4" ></video>
+                                <img class="cover" id="cover3" src="img/cover.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide slide3"> <img class="cover" src="img/pg1.png"></div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+    </div>
+    <!--<video type="video/mp4" style="display: none" src="http://scgcvideo.sctv.com:2235/scfouces/file/video/201710/19/880.mp4"  id="Video"  x5-video-player-type="h5" webkit-playsinline="" x-webkit-airplay="true" airplay="allow" playsinline="" style=" transform: rotate(90deg) translate3d(0px, -10rem, 0px); transform-origin: 0px 0px 0px;"></video>
+    <audio loop="loop" style="display: none" id="audio" src="http://scgcvideo.sctv.com:2235/scfouces/file/video/201710/16/cyxsol.mp3" autoplay></audio>
+-->
+</body>
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery-mobile/1.4.5/jquery.mobile.min.js"></script>
+<script src="https://cdn.bootcss.com/Swiper/4.0.7/js/swiper.min.js"></script>
+<script >
+    /*上下滑动*/
+    /*var mySwiper1 = new Swiper('.swiper-container1',{
+        direction : 'vertical',
+    })*/
+    /*左右滑动*/
+    /*var mySwiper2 = new Swiper('.swiper-container2',{
+    })
+    $('#btn1').click(function(){
+        mySwiper2.slidePrev();
+    })
+    $('#btn2').click(function(){
+        mySwiper2.slideNext();
+    })*/
+    var swiperIndex = sessionStorage.getItem('swiperIndex') ? sessionStorage.getItem('swiperIndex') : 0,
+        initSwiper = {
+            direction: 'vertical',
+            initialSlide : swiperIndex,
+            on:{
+                transitionEnd: function(swiper){
+                    console.log('mySwiper.activeIndex',swiperFather.activeIndex)
+                    if(swiperFather.activeIndex==1){
+                        /*star & stop*/
+                        stopVideo()
+                        document.getElementById("video1").play()
+                    }
+                },
+            },
+            // 切换页面成功之前的回调
+            onSlideChangeStart: function (swiper) {
+                sessionStorage.setItem('swiperIndex', swiper.activeIndex);
+                console.log(sessionStorage)
+            }
+        };
+    var swiperFather = new Swiper('.swiper-container-father', initSwiper);
+    var swiperSon = new Swiper('.swiper-container-son',{
+        on:{
+            transitionEnd: function(swiper){
+                console.log('swiperSon.activeIndex',swiperSon.activeIndex)
+                console.log('video'+(swiperSon.activeIndex+1))
+                stopVideo()
+                document.getElementById('video'+(swiperSon.activeIndex+1)).play()
+            },
+        },
+    });
+    for(var i=1;i<4;i++){
+        var cover = '#cover' + i
+        $(cover).on('tap',(function(i){
+            return function(){
+                console.log('cover'+i)
+                stopVideo()
+                document.getElementById('video'+i).play()
+            }
+        })(i))
+    }
+    function stopVideo() {
+        document.getElementById('video1').pause()
+        document.getElementById('video2').pause()
+        document.getElementById('video3').pause()
+
+    }
+
+    window.onload=function(){
+
+
+
+
+
+        /*document.getElementById('audio').play()
+        setTimeout(function () {
+            $('body').animate({scrollTop: (document.body.scrollHeight)}, 8000)
+        },2000)
+        $("body").on("tap",function(){
+            $('body').stop()
+        })
+            .on("taphold",function(){
+                $('body').stop()
+            })
+            .on("scrollstart",function(){
+                $('body').stop()
+            });
+        $("#playVideo").on("tap",function(){
+            $('body').addClass('body2')
+            $('.baseCtn').css('display','none')
+            $('#Video').css('display','block')
+            document.getElementById('Video').play()
+            document.getElementById('audio').pause()
+        })
+        window.loadVideo = loadVideo*/
+    }
+
+</script>
+</html>
+
